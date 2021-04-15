@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[常用的npm包]]></title>
+    <url>%2F2021%2F04%2F14%2F%E5%B8%B8%E7%94%A8%E7%9A%84npm%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[qs处理URL查询字符串 classnames有条件的组合样式类名 numeral格式化数字 cross-env跨平台设置环境变量 path-to-regexp解析URL中的地址和参数 dayjs格式化日期 huskygit钩子 uuid生成通用唯一标识符（UUID） faker伪造假数据 mockjs模拟数据生成器 concurrently可同时运行多条命令 nodemon监听nodejs程序改动，并重启服务，适合开发阶段 pm2nodejs进程守护]]></content>
+      <categories>
+        <category>nodejs</category>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+        <tag>javascript</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[算法复杂度]]></title>
+    <url>%2F2020%2F10%2F31%2F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6%2F</url>
+    <content type="text"><![CDATA[基本概念算法复杂度讨论的是数据规模趋于无穷大时的情况，所以也称渐进复杂度。渐进复杂度分时间渐进复杂度、空间渐进复杂度，简称时间复杂度、空间复杂度。由于在不同的硬件、操作系统、语言平台等条件下运行同一个算法总能得到不同的时间、内存消耗，所以，时间、空间复杂度描述的并不是程序运行具体所消耗的时间、内存，而是描述执行基本操作的次数、所需额外空间的大小。一般来说，影响算法复杂度的因素主要有以下两方面： 输入数据的状态。（比如排序有序数组，时间消耗很少） 输入数据的规模。（比如排序10、100000个元素，相同算法的时间差别会很大） 意义程序除了要确保能正常运行，还要争取用尽量短的运行时间、尽量少的运行空间，达到预期效果。实际应用中，往往涉及相当大量的数据处理，随着数据规模的增大，基于不同算法的程序在解决同意问题时所需的运行时间、硬件资源会大不相同，有的可能只要几秒，有的却要几天，这时，对算法复杂度的分析就尤为重要。 通过对算法时间、空间复杂度进行分析，得出不同算法的各个特征值，是衡量、筛选有序算法的必要条件。根据算法的各个特征值，使我们能够定量的预测某个算法在解决某个问题时，将需要消耗多少时间、空间等资源，而不要每次都去实际运行测量，有助于我们在不同场景下快速选择出最合适的算法。 大O表示法大O表示法是渐进复杂度的表示方法，时间复杂度T(n) = O(f(n))，空间复杂度S(n) = O(f(n))，其中n代表的便是数据的规模，如果随着n的增大，T(n)、S(n)增长的越慢，算法就越优秀。由于讨论的是数据规模趋于无穷大时的情况，所以渐进复杂度并不是一种精确描述，它所关注的点在数量级的层面上，故两三倍的误差一般不在考虑范围内。下面是一些由低到高排列的常见值： 复杂度 阶级 O(1) 常数阶 O(logn) 对数阶 O(n) 线性阶 O(nlogn) nlongn阶 O(n^2) 平方阶 O(n^3) 立方阶 O(n^k) k次方阶 O(2^n) 指数阶 O(n!) 阶乘阶 O(n^n) 无 算法复杂度关系为： O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n2) &lt; O(n3) 指数时间算法复杂度关系为： O(2n) &lt; O(n!)&lt; O(nn) 函数图： 通常复杂度超过O(n^3)的算法就不再具有应用价值了，因为这是即使很小的数据规模也会带来很大的消耗，比如O(2^n)的算法在100的数据规模下资源消耗达到2^100，在绝大多数情况下，无论是时间还是空间，都是令人无法接受的数字。 算法分析的种类根据输入数据的初始状态不同，算法分析由三种情况：最坏情况、平均情况、最佳情况。 最坏情况：在当前输入规模下，是算法有最大运行时间、空间的数据状态。 平均情况：在当前输入规模下，算法在随机数据状态下的平均运行时间、空间，可以理解位算法复杂度的数学期望。 最佳情况：在当前输入规模下，使算法有最小运行时间、空间的数据状态，比如排序时，输入数据本身就是有序的。 对算法复杂度分析来说，通常讨论的都是最坏情况，但平均情况时最具实际意义的，最坏情况能保证算法在一定数据规模下，消耗保持在可忍受范围内，而平均情况是预测算法真正运行时资源开销的主要指标，不过很多算法的平均情况通常难以计算，经常只能通过不断运行测量、统计才能得出平均情况下的复杂度。 算法复杂度计算时间复杂度首先，时间复杂度计算的是算法执行基本操作的次数。计算方法是：找出算法的基本语句（增长最长的项），展开计算，仅保留最高项，系数化为1。 举个例子： 12345678910111213function bubbleSort(nums: number[]) &#123; let i, j, temp; let len = nums.length; for (i = 0; i &lt; len - 1; i++) &#123; for (j = 0; j &lt; len - 1; j++) &#123; if (nums[j] &gt; nums[j + 1]) &#123; // 基本语句 temp = nums[j + 1]; // 基本语句 nums[j + 1] = nums[j]; // 基本语句 nums[j] = temp // 基本语句 &#125; &#125; &#125;&#125; 数据规模n等于数组长度，基本语句是增长最快的项，对这个算法来说就是循环内层的四句，其语句执行次数是4(n-1)(n(n-1)/2)，展开后仅保留最高项，得到f(n)=4n^2，将系数化为1，便是T(n)=O(n^2)。 如果算法复杂度是个常数，即消耗时间、空间不随数据规模n的增大而变化，此类算法的复杂度是O(1)，比如高斯小时候计算1~100之和的算法： 1234function sum(a: number, b: number) &#123; const result = (a + b) * (b - a + 1) / 2; return result;&#125; 该算法的时间复杂度是常数，无论数据规模b - a如何变化，执行的基本操作都只有一次，即f(n) = 1，所以T(n) = O(1)。 再看下从1累加到100的算法时间复杂度： 1234567function sum(a: number, b: number) &#123; let i, result = 0; for (i = a; i &lt; b; i++) &#123; result += i; &#125; return result;&#125; 数据规模n同样是b - a，但执行的基本次数变成了n，所以f(n) = n，时间复杂度T(n) = O(n)，当数据规模很大时，这个算法跟高斯的算法在效率上会差好几个数量级。 再看个例子： 123456789101112function find(nums: number[], target: number) &#123; let len = nums.length; let l = 0, r = len - 1, mid = l + (r - 1) / 2; //区间三点 for (; mid !== l; mid = l + (r - 1) / 2) &#123; if (nums[mid] === target) return mid; // 找到 else if (nums[l] === target) return l; // 找到 else if (nums[r] === target) return r; // 找到 else if (nums[mid] &gt; target) r = mid; // 中点偏大，更新右端点 else if (nums[mid] &lt; target) r = mid; // 中点偏小，更新左端点 &#125; return -1;&#125; 这个是二分查找，二分查找的思路很简单，在一个有序序列内，每次将当前区间中、左、右三个端点与目标值进行比较，若相同便返回，若大于中间点便更新左端点，反之更新右端点，这样循环下去最终就能确定目标的位置。 假设数据规模为16，且每次循环时目标不在左、中、右三点上，且目标值大于中点，那么初始区间为[0,15]，第一次循环后为[7,15]，第二次循环后为[11,15],第三次循环后为[13,15]，第四次循环后为[14,15]，这时目标值就找出来了，共经过4次循环。 稍加思考可发现，最坏情况下共需要log(2)(n)次循环，比如上面就是log(2)(16) = 4，在复杂度分析中是比较常见的数字，通常可以直接写为logn。戒指，每次循环会进行四次比较，所以f(n) = 4 * logn，系数化为1后T(n) = O(logn)，所以二分查找的时间复杂度是O(logn)。 通常，计算时间复杂度，只需要关注最内层循环的语句，若存在递归，便再与递归次数相乘即可。 空间复杂度算法执行期间所需要的存储空间一般包括三个部分： 算法程序所占空间。 输入的初始数据所占空间。 算法执行过程中所需要的额外空间。 空间复杂度描述的是算法在执行时所需要的额外空间，空间复杂度与时间复杂度的计算方法类似，只是计算换成了关注其在运行时产生的额外空间。 举个例子： 12345function demo(num: number) &#123; if (num &gt; 0 &amp;&amp; num &lt;= 2) return 1; else if (num &lt; 0) return 0; return demo(num - 5);&#125; 如果输入数据规模是21，会进行4次递归，稍加推测，可以得到递归次数为num / 5，因为每次递归产生的额外空间是1，所以f(n) = n / 5，系数化为1，空间复杂度S(n) = O(n)。 如果一个算法产生的额外空间是常数或没有产生额外空间，则空间复杂度便是O(1)，没有产生额外空间或额外空间是很小的常数的算法又被称为原地算法。比如上面举例的冒泡排序、二分查找等就是原地算法，所有用递归实现的算法都不是原地算法。 附录摘录： 【算法】算法复杂度是什么？ 参考： 算法的时间复杂度 算法——复杂度分析 一文搞懂算法的时间复杂度与空间复杂度]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用Hexo在Github上免费搭建个人博客]]></title>
+    <url>%2F2019%2F12%2F22%2F%E4%BD%BF%E7%94%A8Hexo%E5%9C%A8Github%E4%B8%8A%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[介绍Hexo 是一个快速、简洁且高效的博客框架。Hexo 可使用 Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 准备 安装Git； 安装Node.js（版本不低于8.10，建议10.0以上版本）； github账户（gitee、coding亦可）； 开始安装hexo1$ npm install hexo-cli -g 可用以下命令检查是否安装成功 1$ hexo -v 创建工程本地新建文件夹，进入该文件夹，并在该目录下执行以下命令进行初始化 1$ hexo init 这个过程比较长，稍作等待后，若看到输出Start blogging with Hexo!，就说明初始化好了。 然后执行依赖包安装命令 1$ npm install 完成后，输入以下命令启动本地服务 1$ hexo server 完成后，浏览器访问http://localhost:4000，即可看到博客首页。 新建文章使用hexo new &lt;title&gt;来创建文章，例： 1$ hexo new "测试文章" 之后就会在source/_post文件夹下看到新建的文件。 然后使用markdown编辑器（推荐vscode，或typora）编写文章，这期间，只要hexo server启动的服务保持运行，编写后刷新即可看到最新内容。 发布首先在github上新建一个仓库，仓库名称必须为账号名称.github.io。 然后在工程配置文件_config.yml中配置你的仓库地址。 部署到git还需要安装hexo-deployer-git，在工程目录下运行 1$ npm install hexo-deployer-git 安装完成后，执行以下命令就可以发布到git了 12$ hexo generate # 构建$ hexo deploy # 部署 命令完成后，刷新github的仓库页面，看到刚才本地创建的都提交上了，说明发布成功。 这时候就可以通过账号名称.github.io访问到博客页面了（可能需要等待几分钟时间）。 进阶站点配置可以在站点_config.yml中配置站点信息，如站点名称、作者、语言等。 主题设置安装到主题商店下载主题并解压到themes目录下 修改工程配置文件_config.yml，将theme的值改为新主题文件夹的名称，如图： 修改完重启服务命令hexo server（键入ctrl+c中止命令），即可应用新主题。 定制可以通过修改主题文件目录下的_config.yml定制主题。 菜单 修改配置里的menu 模式 修改配置里的schema 头像 修改配置里的avatar 其他 可以修改_config.yml尝试，配置里注释详细，对使用还是比较友好的。 列表简略 如上图，将文章内容完整显示在列表上并不好，影响阅读，可以通过以下方式设置列表上要显示的内容： description 在文件头使用description设置文章的简要内容： &lt;!-- more --&gt;标签 在文章要中断的地方插入&lt;!-- more --&gt;，效果如下： 搜索功能安装搜索插件： 1$ npm install hexo-generator-searchdb 在项目下的_config.yml添加配置： 附上配置代码： 12345search: path: search.xml filed: post format: html limit: 10000 并在主题的配置文件_config.yml开启搜索菜单： 这样，搜索功能就配置完成！ 其他还可以添加评论、打赏、RSS等功能，可自行查找文档，都比较简单。]]></content>
+      <categories>
+        <category>nodejs</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows常用软件和插件]]></title>
+    <url>%2F2019%2F08%2F28%2Fwindows%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[软件浏览器 chrome chrome canary cent browser new microsoft edge 编辑器/IDE visual studio code sublime text notepad++ typora（markdown） notepads（Window Store，代替自带Notepad） 比对工具 beyond compare meld UML staruml process.on visual paradigm draw.io 压缩工具 bandizip 图片浏览 honey view 视频播放 potplayer 截图工具 snipaste fast stone capture 录屏工具 screen to gif 抓包工具 fiddler 远程桌面/连接 anydesk putty 向日葵 系统优化 ccleaner 火绒 geek uninstaller dism++ 快捷启动 wox uTools 命令行 nircmd 下载工具 迅雷极速版 EagleGet Proxyee Down 其他 synergy（键鼠共享） desk pins（窗口置顶） TranslucentTB（Window Store, 任务栏透明） 插件visual studio code one dark pro vscode-icons eslint prettier beautify auto close tag better comments npm intellisense path intellisense gitlens git history markdown all in one markdown preview github styling markdown theme kit markdown toc markdown lint go vetur code runner view in browser dash settings sync todo highlight project manager]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>software</tag>
+        <tag>plugin</tag>
+        <tag>devtools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[禁止iframe控制父窗口跳转]]></title>
+    <url>%2F2019%2F08%2F27%2F%E7%A6%81%E6%AD%A2iframe%E6%8E%A7%E5%88%B6%E7%88%B6%E7%AA%97%E5%8F%A3%E8%B7%B3%E8%BD%AC%2F</url>
+    <content type="text"><![CDATA[最近开发个功能，对于富文本的a标签，要求在当前标签弹窗打开。 实现方案是对a标签绑定click事件，点击时阻止默认，然后读取href，在弹窗组件中嵌套iframe，将iframe跳转到该href。 但跳转到个别站点时，竟将外层的页面也跳转了。 排查后发现，应该是个别站点中对修改了父级或顶级窗口的location，如： 1234// 控制父级窗口跳转window.parent.location.href = 'xxx.com';// 或 控制顶级窗口跳转window.top.location.href = 'xxx.com'; 确定问题后，尝试了一些方案，均无法解决： 监听beforeunload，看下能否有preventDefault类似的操作来阻止页面跳转。 使用Object.freee冻结location对象，让子窗口不可修改。 后来在网上找到方案，利用h5 iframe的新特性sandbox完美解决，支持度: caniuse也比较好，ie9+。 示例： 1&lt;iframe sandbox="allow-same-origin allow-scripts allow-popups"&gt;&lt;/iframe&gt; 参考： 如何阻止iframe里引用的网页自动跳转iframe 标签的 sandbox 属性]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>html5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[npm script添加git pre-commit钩子]]></title>
+    <url>%2F2018%2F05%2F08%2Fnpm-script%E6%B7%BB%E5%8A%A0git-pre-commit%E9%92%A9%E5%AD%90%2F</url>
+    <content type="text"><![CDATA[安装 npm install pre-commit –save-dev package.json如果你已经安装了 pre-commit， 那你就需要在你的 package.json 里面添加一个新的 pre-commit 的入口, 来表示在 commit 之前要执行的校验规则。 12345678910&#123; "scripts": &#123; "lint": "eslint ./ --cache --ignore-pattern .gitignore" &#125;, "pre-commit": [ "lint" ], "devDependencies": &#123; "eslint": "^2.12.0", "pre-commit": "^1.1.3" &#125;&#125; Pre-commit 信息 可以在 pre-commit 前加一个描述日志，，这个不会造成信息混乱，清楚的知道发生了什么事。 1234567891011&#123; "scripts": &#123; "lint": "eslint ./ --cache --ignore-pattern .gitignore", "precommit-msg": "echo 'Pre-commit checks...' &amp;&amp; exit 0" &#125;, "pre-commit": [ "precommit-msg", "lint" ], "devDependencies": &#123; "eslint": "^2.12.0", "pre-commit": "^1.1.3" &#125;&#125; 问题 pre-commit 钩子没有执行成功， 还是可以在 commit 的后面加上 --no-verify 的参数来强制提交。 window由于权限问题，无法在hooks下生成文件，需要以管理打开cmd，执行 node ./node_modules/pre-commit/install.js 手动生成钩子文件。 也可以添加postinstall钩子在项目安装后检查hooks下文件有没有生成，若没有则进执行生成命令： package.json12345&#123; "scripts": &#123; "postinstall": "node ./postinstall.js" &#125;&#125; postinstall.js12345678910111213141516171819202122const fs = require('fs');const path = require('path');const &#123; exec &#125; = require('child_process');fs.access(path.join(__dirname, './.git/hooks/pre-commit'), fs.constants.F_OK, (err) =&gt; &#123; if (err) &#123; // 未安装钩子 exec('node ./node_modules/pre-commit/install.js', &#123; cwd: dirname &#125;, (err, stdout, stderr) =&gt; &#123; if (err) &#123; console.error(`install pre-commit error: $&#123;err&#125;`); return; &#125; if (stdout) &#123; console.log(`install pre-commit stdout: $&#123;stdout&#125;`); &#125; if (stderr) &#123; console.log(`install pre-commit stderr: $&#123;stderr&#125;`); &#125; &#125;); &#125;&#125;);]]></content>
+      <categories>
+        <category>nodejs</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+        <tag>npm</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[W3C DOM异常对象DOMException]]></title>
+    <url>%2F2018%2F05%2F08%2FW3C-DOM%E5%BC%82%E5%B8%B8%E5%AF%B9%E8%B1%A1DOMException%2F</url>
+    <content type="text"><![CDATA[DOMExceptionDOMException是W3C DOM核心对象。DOMException接口表示一个处理的错误，当一个操作不可能执行的时候，会抛出一个异常。例如试图创建一个无效的DOM, 或通过一个不存在的节点作为参数节点操作方法。 常量列表该接口定义了ExceptionCode整数值——向外暴露code属性——指向每种类型的错误；这些定义参考下面些常量： INDEX_SIZE_ERR code 1 如果索引是负值，或是超过了允许值。例如splitText的offset参数比字符串长度还要长。 DOMSTRING_SIZE_ERR code 2 DOMString的特定字符数据太大。其大小显示是依赖实现的，未被DOM定义（每个浏览器的限制细节参见DOM Core）。 HIERARCHY_REQUEST_ERR code 3 节点不允许有新的子节点，或者新节点已经是其该节点的祖先节点。例如，尝试将Element节点塞入Text节点。 WRONG_DOCUMENT_ERR code 4 试图使用跨文档的节点操作。例如，appendChild的子节点来自其他文档。而不是先输出(使用importNode)。 INVALID_CHARACTER_ERR code 5 一个非法的或无效的字符指定一个有限制的字符串，例如元素的name. NO_DATA_ALLOWED_ERR code 6 为不支持数据的节点指定数据。如Element节点本身不包含数据，其子节点包含。 NO_MODIFICATION_ALLOWED_ERR code 7 试图修改一个不能被修改的节点。例如，装载一个只读的节点。 NOT_FOUND_ERR code 8 引用的节点不存在。例如，insertBefore相关子节点不是引用的子节点。 NOT_SUPPORTED_ERR code 9 实现不支持的特定操作。例如使用一个节点的方法，但是此方法并没有实现，就是抛出此错误。 INUSE_ATTRIBUTE_ERR code 10 试图添加一个正在使用的属性。例如使用setAttributeNode引用一个已经在另一个元素使用的Attr, 而不是克隆它首先(使用cloneNode)。 INVALID_STATE_ERR code 11 试图使用一个不可用的对象。这种错误的抛出通常是因为某些内部原因，方法无法实现特定的操作。 SYNTAX_ERR code 12 无效或非法的字符串被指定。例如，用无效的CSS值设置selectorText属性的CSSStyleRule. //zxx: 我遇到该错误是因为在特定情况下，对&lt;title&gt;标签使用了innerHTML方法。 INVALID_MODIFICATION_ERR code 13 尝试修改一个节点的类型。例如，使用不匹配最初规则类型的值设置cssText属性的CSSRule.(如，为at-rule设置style-rule values值). NAMESPACE_ERR code 14 操作与命名空间冲突。例如createElementNS使用的名称歪瓜裂枣。 INVALID_ACCESS_ERR code 15 一个属性或操作不支持指定的节点。例如，尝试在一个不含float值的CSS属性上使用getFloatValue的CSSPrimitiveValue方法。 转载自：W3C DOM异常对象DOMException介绍]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用node子进程spawn,exec踩过的坑]]></title>
+    <url>%2F2018%2F05%2F08%2F%E4%BD%BF%E7%94%A8node%E5%AD%90%E8%BF%9B%E7%A8%8Bspawn-exec%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[child_processNodejs是单线程单进程的，但是有了child_process模块，可以在程序中直接创建子进程，并使用主进程和子进程之间实现通信。 问题用child_process.exec启动的项目经常性的挂掉。 原因定位： exec与spawn是有区别的 exec是对spawn的一个封装 最重要的exec比spawn多了一些默认的option exec和spawn的源码区分exec是对execFile的封装，execFile又是对spawn的封装。 每一层封装都是加强一些易用性以及功能。 源码 1234567exports.exec = function(command /*, options, callback*/) &#123; var opts = normalizeExecArgs.apply(null, arguments); return exports.execFile(opts.file, opts.args, opts.options, opts.callback);&#125;; exec对于execFile的封装是进行参数处理， 处理的函数：normalizeExecArgs。 关键处理逻辑 1234567891011if (process.platform === 'win32') &#123; file = process.env.comspec || 'cmd.exe'; args = ['/s', '/c', '"' + command + '"']; // Make a shallow copy before patching so we don't clobber the user's // options object. options = util._extend(&#123;&#125;, options); options.windowsVerbatimArguments = true;&#125; else &#123; file = '/bin/sh'; args = ['-c', command];&#125; 将简单的command命名做一个，win和linux的平台处理。 此时execFile接受到的就是一个区分平台的command参数。 然后重点来了，继续debug，execFile中： 12345678var options = &#123; encoding: 'utf8', timeout: 0, maxBuffer: 200 * 1024, killSignal: 'SIGTERM', cwd: null, env: null&#125;; 有这么一段，设置了默认的参数。然后后面又是一些参数处理，最后调用spawn方法启动子进程。 上面的简单流程就是启动一个子进程。到这里都没有什么问题。 继续看，重点又来了： 用过子进程应该知道这个child.stderr 下面的代码就解答了为什么子进程会挂掉。 12345678910111213child.stderr.addListener('data', function(chunk) &#123; stderrLen += chunk.length; if (stderrLen &gt; options.maxBuffer) &#123; ex = new Error('stderr maxBuffer exceeded.'); kill(); &#125; else &#123; if (!encoding) _stderr.push(chunk); else _stderr += chunk; &#125;&#125;); 逻辑就是，记录子进程的log大小，一旦超过maxBuffer就kill掉子进程。 原来真相在这里。我们在使用exec时，不知道设置maxBuffer，默认的maxBuffer是200K,当我们子进程日志达到200K时，自动kill()掉了。 exec和spawn的使用区分不过exec确实比spawn在使用上面要好很多 例如我们执行一个命令 使用exec require(‘child_process’).exec(‘edp webserver start’); 使用spawn linux下这么搞 123456789var child = require('child_process').spawn( '/bin/sh', ['-c','edp webserver start'], &#123; cwd: null, env: null, windowsVerbatimArguments: false &#125;); win下 123456789var child = require('child_process').spawn( 'cmd.exe', ['/s', '/c', 'edp webserver start'], &#123; cwd: null, env: null, windowsVerbatimArguments: true &#125;); 可见spawn还是比较麻烦的。 解决方案知道上面原因了，解决方案就有几个了: 子进程的系统，不再输出日志 maxBuffer这个传一个足够大的参数 直接使用spawn，放弃使用exec 我觉得最优的方案是直接使用spawn，解除maxBuffer的限制。但是实际处理中，发现直接考出normalizeExecArgs这个方法去处理平台问题，在win下还是有些不好用，mac下没有问题。所以暂时将maxBuffer设置了一个极大值，保证大家的正常使用。然后后续在优化成spawn方法。 转载自：使用node子进程spawn,exec踩过的坑]]></content>
+      <categories>
+        <category>nodejs</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo quick start]]></title>
+    <url>%2F2018%2F05%2F04%2FHexo%20quick%20start%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>nodejs</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+</search>
