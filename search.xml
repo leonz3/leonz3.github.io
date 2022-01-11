@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[常用的npm包]]></title>
     <url>%2F2021%2F04%2F14%2F%E5%B8%B8%E7%94%A8%E7%9A%84npm%E5%8C%85%2F</url>
-    <content type="text"><![CDATA[qs处理URL查询字符串 classnames有条件的组合样式类名 numeral格式化数字 cross-env跨平台设置环境变量 path-to-regexp解析URL中的地址和参数 dayjs格式化日期 huskygit钩子 uuid生成通用唯一标识符（UUID） faker伪造假数据 mockjs模拟数据生成器 concurrently可同时运行多条命令 nodemon监听nodejs程序改动，并重启服务，适合开发阶段 pm2nodejs进程守护]]></content>
+    <content type="text"><![CDATA[qs处理URL查询字符串 classnames有条件的组合样式类名 numeral格式化数字 cross-env跨平台设置环境变量 path-to-regexp解析URL中的地址和参数 dayjs格式化日期 huskygit钩子 uuid生成通用唯一标识符（UUID） faker伪造假数据 mockjs模拟数据生成器 concurrently可同时运行多条命令 nodemon监听nodejs程序改动，并重启服务，适合开发阶段 pm2nodejs进程守护 opencv计算机视觉库]]></content>
       <categories>
         <category>nodejs</category>
         <category>javascript</category>
@@ -40,7 +40,7 @@
   <entry>
     <title><![CDATA[windows常用软件和插件]]></title>
     <url>%2F2019%2F08%2F28%2Fwindows%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%2F</url>
-    <content type="text"><![CDATA[软件浏览器 chrome chrome canary cent browser new microsoft edge 编辑器/IDE visual studio code sublime text notepad++ typora（markdown） notepads（Window Store，代替自带Notepad） 比对工具 beyond compare meld UML staruml process.on visual paradigm draw.io 压缩工具 bandizip 图片浏览 honey view 视频播放 potplayer 截图工具 snipaste fast stone capture 录屏工具 screen to gif 抓包工具 fiddler 远程桌面/连接 anydesk putty 向日葵 系统优化 ccleaner 火绒 geek uninstaller dism++ 快捷启动 wox uTools 命令行 nircmd 下载工具 迅雷极速版 EagleGet Proxyee Down 其他 synergy（键鼠共享） desk pins（窗口置顶） TranslucentTB（Window Store, 任务栏透明） 插件visual studio code one dark pro vscode-icons eslint prettier beautify auto close tag better comments npm intellisense path intellisense gitlens git history markdown all in one markdown preview github styling markdown theme kit markdown toc markdown lint go vetur code runner view in browser dash settings sync todo highlight project manager]]></content>
+    <content type="text"><![CDATA[软件浏览器 chrome chrome canary cent browser new microsoft edge 编辑器/IDE visual studio code sublime text notepad++ typora（markdown） notepads（Window Store，代替自带Notepad） 比对工具 beyond compare meld UML staruml process.on visual paradigm draw.io 压缩工具 bandizip 图片浏览 honey view 视频播放 potplayer 截图工具 snipaste fast stone capture 录屏工具 screen to gif 抓包工具 fiddler Charles 远程桌面/连接 Anydesk TeamViewer ToDesk putty 向日葵 系统优化 ccleaner 火绒 geek uninstaller dism++ BitDock 快捷启动 wox uTools 命令行 nircmd 下载工具 迅雷11 EagleGet Proxyee Down 移动设备 MuMu模拟器 AirDroid HandShaker iTools 其他 synergy（键鼠共享） desk pins（窗口置顶） TranslucentTB（Window Store, 任务栏透明） 插件visual studio code one dark pro vscode-icons eslint prettier beautify auto close tag better comments npm intellisense path intellisense gitlens git history markdown all in one markdown preview github styling markdown theme kit markdown toc markdown lint go vetur code runner view in browser dash settings sync todo highlight project manager]]></content>
       <categories>
         <category>software</category>
       </categories>
